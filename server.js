@@ -379,7 +379,7 @@ class BrowserPool {
                 '--disable-renderer-backgrounding',
                 '--autoplay-policy=no-user-gesture-required' // Für stabile Scans
             ],
-            headless: 'new', // Verwende den neuen Headless-Modus
+            headless: 'true', // Verwende den neuen Headless-Modus
             timeout: 20000 // Längerer Timeout für Browser-Launch
         });
         metrics.browserPoolStats.created++;
