@@ -1,4 +1,3 @@
-Backend
 // server.js - Enhanced Production-Ready Version
 require('dotenv').config();
 const express = require('express');
@@ -1043,10 +1042,7 @@ app.use((err, req, res, next) => {
 
 
 // Start the server
-const PORT = process.env.PORT || config.PORT || 3000;
-const server = app.listen(PORT, () => {
-    logger.info(`🚀 Server läuft auf Port ${PORT} (${config.NODE_ENV} mode)`);
-});
+app.listen(config.PORT, () => {
     logger.info(`Server running on port ${config.PORT} in ${config.NODE_ENV} mode`);
     logger.info(`API documentation available at http://localhost:${config.PORT}/api-docs`);
     logger.info(`FRONTEND_WHITELIST: ${config.FRONTEND_WHITELIST.join(', ')}`);
