@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const Sentry = require('@sentry/node');
 const DailyRotateFile = require('winston-daily-rotate-file');
-const puppeteer = require('puppeteer');
+const { chromium } = require('playwright');
 const NodeCache = require('node-cache');
 const crypto = require('crypto'); // Für Cache-Keys
 
@@ -363,7 +363,7 @@ class BrowserPool {
 
     async createBrowser() {
         logger.debug('Launching new browser instance...');
-        const browser = await puppeteer.launch({
+        const browser = await chromium.launch({
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
