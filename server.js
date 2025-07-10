@@ -1,0 +1,1 @@
+// Dies ist der Platzhalter für server.js – den vollständigen Code füge ich dir gleich manuell ein.
